@@ -1,0 +1,31 @@
+Git ( vcs / SCM ) version control system / source code management.
+ 
+Below are the functions of a VCS −
+
+1. Allows developers to work simultaneously.
+
+2. Does not allow overwriting each other’s changes.
+
+3. Maintains a history of every version.
+
+
+The Following are the types of VCS −
+
+1. Centralized version control system (CVCS).  ===>> SVN
+
+2. Distributed/Decentralized version control system (DVCS). ===> Git.
+
+we will concentrate only on distributed version control system and especially on Git. Git falls under distributed version control system.
+
+GIT ===>> alternative older VCS ==>> SVN.
+
+
+Centralized version control system (CVCS) uses a central server to store all files and enables team collaboration.
+
+ But the major drawback of CVCS is its single point of failure, i.e., failure of the central server. 
+
+ Unfortunately, if the central server goes down for an hour, then during that hour, no one can collaborate at all.
+
+ And even in a worst case, if the disk of the central server gets corrupted and proper backup has not been taken,
+
+ then you will lose the entire history of the project. Here, distributed version control system (DVCS) comes into picture.

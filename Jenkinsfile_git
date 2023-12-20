@@ -1,0 +1,11 @@
+pipeline {
+  agent any
+ 
+   stages{
+    stage("git clone"){
+      steps{
+	     git branch: 'main', credentialsId: 'GitHub', url: 'https://github.com/aakumar07/devops2aws_12-30-PM.git'
+             }
+    }
+  }
+}

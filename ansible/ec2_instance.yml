@@ -1,0 +1,23 @@
+---
+ - name: EC2 instance creation
+   hosts: localhost
+   become: true
+   tasks:
+    - pip:
+       name: boto
+    - name: Configuring  instance
+      ec2:
+        aws_access_key: AKIAQDEY2WSLLPGODE4O
+        aws_secret_key: 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
+        region: us-east-2
+        image: ami-011ab7c70f5b5170a
+        count: 1
+        instance_type: t2.micro
+        key_name: key_connect
+        vpc_subnet_id: subnet-0a710bfecb41e02ce
+        assign_public_ip: true
+        group: launch-wizard-1
+        wait: yes
+        instance_tags:
+          Name: myinstance
+      register: ec2

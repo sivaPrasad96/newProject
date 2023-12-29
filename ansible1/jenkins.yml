@@ -1,0 +1,6 @@
+---
+ - hosts: node1
+   become: true
+   tasks:
+    - name: Exuting the script
+      script: ./jenkins.sh

@@ -1,0 +1,23 @@
+---
+ - name: EC2 instance creation
+   hosts: localhost
+   become: true
+   tasks:
+    - pip:
+       name: boto
+    - name: Configuring  instance
+      ec2:
+        aws_access_key: AKIA2UVJRDYLEYWDGLE2
+        aws_secret_key: 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
+        region: ap-south-1
+        image: ami-08fe36427228eddc4
+        count: 1
+        instance_type: t2.micro
+        key_name: my_connect
+        vpc_subnet_id: subnet-0112dcfdc68352dae
+        assign_public_ip: true
+        group: launch-wizard-1
+        wait: yes
+        instance_tags:
+          Name: Jenkins
+      register: ec2

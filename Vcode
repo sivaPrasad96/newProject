@@ -1,0 +1,4 @@
+Host 3.17.186.235
+    HostName 3.17.186.235
+    User ec2-user
+    IdentityFile "C:\Users\preet\Downloads\key_connect.pem"

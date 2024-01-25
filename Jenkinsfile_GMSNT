@@ -14,7 +14,7 @@ pipeline{
 
         stage("maven build & sonar scan"){
             steps{
-                sh 'mvn -f /var/lib/jenkins/workspace/pipline/creditcard/pom.xml clean sonar:sonar package'
+                sh 'mvn -f /var/lib/jenkins/workspace/pipeline/creditcard/pom.xml clean sonar:sonar package'
             }
         }
 
@@ -24,7 +24,7 @@ pipeline{
                     [
                         artifactId: 'creditcard', 
                         classifier: '', 
-                        file: '/var/lib/jenkins/workspace/pipline/creditcard/target/creditcard.war', 
+                        file: '/var/lib/jenkins/workspace/pipeline/creditcard/target/creditcard.war', 
                         type: 'war']
                     ], 
                     credentialsId: 'nexus3', 

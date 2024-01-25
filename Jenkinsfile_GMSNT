@@ -40,7 +40,7 @@ pipeline{
         stage("deploy to wat in Tomcat"){
             steps{
                 sshagent(['tomcat']) {
-                    sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/mven_build/creditcard/target/creditcard.war  ec2-user@18.224.82.36:/home/ec2-user/apache-tomcat-9/webapps/'
+                    sh 'scp -o StrictHostKeyChecking=no /var/lib/jenkins/workspace/mven_build/creditcard/target/creditcard.war  ec2-user@18.224.82.36:/home/ec2-user/tomcat-9/webapps/'
                 }
             }
         }
